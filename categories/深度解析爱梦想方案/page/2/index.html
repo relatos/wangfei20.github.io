@@ -211,13 +211,8 @@
       else if (ua.match(/metasr/) != null)
         badBrowser = "搜狗"
 
-      var path = badBrowser ? `/assets/images/${file}.jpg` : `/assets/videos/${file}.mp4` <
-        %
-        if (config.jsdelivr.enable) {
-          % >
-          path = `https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest` + path <
-            %
-        } % >
+      var path = badBrowser ? `/assets/images/${file}.jpg` : `/assets/videos/${file}.mp4` 
+          path = `https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest` + path 
 
       bg.innerHTML = badBrowser ? `<div class="background-image jarallax" data-jarallax data-speed="0.8">
         <picture>
