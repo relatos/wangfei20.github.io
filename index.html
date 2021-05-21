@@ -208,17 +208,20 @@
       const ua = navigator.userAgent.toLocaleLowerCase();
 
       var badBrowser = null;
-      if(ua.match(/qqbrowse/) != null || ua.match(/tencenttraveler/) != null)
+      if (ua.match(/qqbrowse/) != null || ua.match(/tencenttraveler/) != null)
         badBrowser = "QQ"
-      else if(ua.match(/ubrowser/) != null)
+      else if (ua.match(/ubrowser/) != null)
         badBrowser = "UC"
-      else if(ua.match(/metasr/) != null)
+      else if (ua.match(/metasr/) != null)
         badBrowser = "搜狗"
 
-      var path = badBrowser ? `/assets/images/${file}.jpg` : `/assets/videos/${file}.mp4`
-      
-        path = `https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest` + path
-      
+      var path = badBrowser ? `/assets/images/${file}.jpg` : `/assets/videos/${file}.mp4` <
+        %
+        if (config.jsdelivr.enable) {
+          % >
+          path = `https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest` + path <
+            %
+        } % >
 
       bg.innerHTML = badBrowser ? `<div class="background-image jarallax" data-jarallax data-speed="0.8">
         <picture>
@@ -233,8 +236,8 @@
       <div class="background-color" style="background-image: linear-gradient(180deg, rgba(14, 14, 14, 0) 0%, #0e0e0e 100%);"></div>
       `;
 
-    //if(badBrowser)
-    //  alert("为了最佳体验，请更换浏览器查看本网站！")
+      //if(badBrowser)
+      //  alert("为了最佳体验，请更换浏览器查看本网站！")
     </script>
   </div>
   <div class="container py-lg-2">
@@ -265,9 +268,9 @@
             <a href="/plan/chapter-1" class="card-title h2">前言</a>
             <div class="card-text">既然万亿美元市值能够让数以万计的人才成为亿万富豪，我们可否用未来“万亿美元市值财富”激励人才，打造万亿美元市值公司呢？爱梦想方案已经给出清晰的答案。</div>
             <a href="/plan/chapter-1" class="btn btn-clean">了解详情<svg class='icon-arrow icon-arrow-right' width='25' height='10' viewBox='0 0 25 10' fill='none' xmlns='http://www.w3.org/2000/svg'>
-              <path d='M20 1L24 5L20 9' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-              <path d='M7 5L24 5' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-            </svg></a>
+                <path d='M20 1L24 5L20 9' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+                <path d='M7 5L24 5' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+              </svg></a>
           </div>
         </div>
       </div>
@@ -282,9 +285,9 @@
             <div class="card-text"> 爱梦想公司90%股份，将如何在37200名精英中进行分配，以确保万亿美元市值时人人都是亿万富豪呢？
             </div>
             <a href="/plan/chapter-2" class="btn btn-clean">了解详情<svg class='icon-arrow icon-arrow-right' width='25' height='10' viewBox='0 0 25 10' fill='none' xmlns='http://www.w3.org/2000/svg'>
-              <path d='M20 1L24 5L20 9' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-              <path d='M7 5L24 5' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-            </svg></a>
+                <path d='M20 1L24 5L20 9' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+                <path d='M7 5L24 5' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+              </svg></a>
           </div>
         </div>
       </div>
@@ -299,9 +302,9 @@
 
             <div class="card-text">爱梦想完全运行在互联网上，数万爱梦想人将在全球任何地方通过互联网网上上班，无论您身在何地，加入爱梦想都是简单无比！</div>
             <a href="/plan/chapter-3" class="btn btn-clean">了解详情<svg class='icon-arrow icon-arrow-right' width='25' height='10' viewBox='0 0 25 10' fill='none' xmlns='http://www.w3.org/2000/svg'>
-              <path d='M20 1L24 5L20 9' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-              <path d='M7 5L24 5' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-            </svg></a>
+                <path d='M20 1L24 5L20 9' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+                <path d='M7 5L24 5' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+              </svg></a>
           </div>
         </div>
       </div>
@@ -317,9 +320,9 @@
 
             <div class="card-text">“当我们勇敢做出改变时，这些看似张牙舞爪的拦路虎瞬间逃跑的无影无踪，不要说37200人，就是再增加两倍的人员，爱梦想也能够既来之则安之。”</div>
             <a href="/plan/chapter-4" class="btn btn-clean">了解详情<svg class='icon-arrow icon-arrow-right' width='25' height='10' viewBox='0 0 25 10' fill='none' xmlns='http://www.w3.org/2000/svg'>
-              <path d='M20 1L24 5L20 9' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-              <path d='M7 5L24 5' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-            </svg></a>
+                <path d='M20 1L24 5L20 9' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+                <path d='M7 5L24 5' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+              </svg></a>
           </div>
         </div>
       </div>
@@ -333,9 +336,9 @@
             <a href="/plan/chapter-5" class="card-title h2">我们的使命</a>
             <div class="card-text">这里将激发出成千上万个敢于“天马行空”的马斯克，这里将发起成千上万个“SpaceX”、“tesla”一样不可思议的创新项目，这里将成为新一代梦想家改变世界的理想之地。</div>
             <a href="/plan/chapter-5" class="btn btn-clean">了解详情<svg class='icon-arrow icon-arrow-right' width='25' height='10' viewBox='0 0 25 10' fill='none' xmlns='http://www.w3.org/2000/svg'>
-              <path d='M20 1L24 5L20 9' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-              <path d='M7 5L24 5' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-            </svg></a>
+                <path d='M20 1L24 5L20 9' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+                <path d='M7 5L24 5' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+              </svg></a>
           </div>
         </div>
       </div>
@@ -353,7 +356,7 @@
     </svg>
   </div>
   <div class="container">
-    <!-- <div class="row justify-content-xl-center gh-1 gv-5 mb-n7">
+    <div class="row justify-content-xl-center gh-1 gv-5 mb-n7">
       <div class="col-12 col-lg-4 mr-lg-auto mr-xl-0 show-on-scroll" data-show-duration="900">
         <div class="subtitle mt-n10">爱梦想公司第一阶段奋斗目标</div>
         <h2 class="h3">四至五年打造六个拼多多，市值突破六千亿美元？</h2>
@@ -386,147 +389,147 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <!--div class="gallery-item gallery-item-sm mt-160 mb-60 show-on-scroll" data-show-duration="900">
       <picture>
         <source media="(max-width: 827.98px)" srcset="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/phase-1-goal-sm.jpg" />
         <img src="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/phase-1-goal.jpg" data-show-duration="800">
       </picture>
     </div-->
+
+
+    <div class="swiper swiper-button-style-1 mt-160 mb-60 show-on-scroll" data-swiper-slides="1" data-swiper-speed="600" data-swiper-loop="true" data-swiper-parallax="true" data-show-duration="500">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide overflow-hidden">
+            <div class="card card-overlay card-blog card-image-sm card-hover-zoom text-center text-white">
+              <div class="card-img" data-swiper-parallax-x="20%" class="swiper-image">
+                <picture>
+                  <source media="(max-width: 827.98px)" srcset="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/forum/fforum-sm.jpg" />
+                  <img src="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/forum/fforum.jpg" />
+                </picture>
+                <div class="background-color" style="background-color: rgba(14, 14, 14, .4);"></div>
+              </div>
+              <div class="card-img-overlay">
+                <div class="row justify-content-center align-items-center h-100">
+                  <div class="col-12 col-lg-7">
+                    <a href="/forum/" class="text-white">
+                      <h2 class="card-title h3-sm mb-0">
+                        Aomoxo Global Forum 2021
+                      </h2>
+                      <p class="btn btn-clean mt-30">
+                        阅读全文
+                        <svg class="icon-arrow icon-arrow-right" width='26' height='11' viewBox='0 0 26 11' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                          <path d='M20.5 1L25 5.5L20.5 10' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+                          <path d='M7 5.5H25' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+                        </svg>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="swiper-slide overflow-hidden">
+            <div class="card card-overlay card-blog card-image-sm card-hover-zoom text-center text-white">
+              <div class="card-img" data-swiper-parallax-x="20%" class="swiper-image">
+                <picture>
+                  <source media="(max-width: 827.98px)" srcset="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/letter/letter-sm.jpg" />
+                  <img src="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/letter/letter.jpg" />
+                </picture>
+                <div class="background-color" style="background-color: rgba(14, 14, 14, .4);"></div>
+              </div>
+              <div class="card-img-overlay">
+                <div class="row justify-content-center align-items-center h-100">
+                  <div class="col-12 col-lg-7">
+                    <a href="/letter/" class="text-white">
+                      <h2 class="card-title h3-sm mb-0">
+                        给野心家们的邀请函
+                      </h2>
+                      <p class="btn btn-clean mt-30">
+                        阅读全文
+                        <svg class="icon-arrow icon-arrow-right" width='26' height='11' viewBox='0 0 26 11' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                          <path d='M20.5 1L25 5.5L20.5 10' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+                          <path d='M7 5.5H25' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+                        </svg>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="swiper-button-prev white-swiper-button"><svg width='26' height='11' viewBox='0 0 26 11' fill='none' xmlns='http://www.w3.org/2000/svg'>
+          <path d='M5.5 1L1 5.5L5.5 10' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+          <path d='M19 5.5H1' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+        </svg></div>
+      <div class="swiper-button-next white-swiper-button"><svg width='26' height='11' viewBox='0 0 26 11' fill='none' xmlns='http://www.w3.org/2000/svg'>
+          <path d='M20.5 1L25 5.5L20.5 10' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+          <path d='M7 5.5H25' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+        </svg></div>
+    </div>
     <div class="pt-160">
       <h2 class="text-center mb-100 mt-n10">阅读博客文章</h2>
       <div class="row gh-1 gv-4 pb-30">
         
-          <div class="col-12 col-sm-6 col-lg-4 show-on-scroll" data-show-delay="100" data-show-duration="500" data-show-distance="20">
-            <a class="card card-blog card-vertical" href="/how-to-get-income/">
-              <span class="card-img">
-                <img src="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/posts/income-sm.jpg" alt="">
-              </span>
-              <span class="card-body">
-                <span class="card-title h5">不要忘了，爱梦想的精英们不仅可以分享万亿美元市值，还有权分享90%利润</span>
-                <span class="card-date">2020/10/28</span>
-              </span>
-            </a>
-          </div>
+        <div class="col-12 col-sm-6 col-lg-4 show-on-scroll" data-show-delay="100" data-show-duration="500" data-show-distance="20">
+          <a class="card card-blog card-vertical" href="/how-to-get-income/">
+            <span class="card-img">
+              <img src="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/posts/income-sm.jpg" alt="">
+            </span>
+            <span class="card-body">
+              <span class="card-title h5">不要忘了，爱梦想的精英们不仅可以分享万亿美元市值，还有权分享90%利润</span>
+              <span class="card-date">2020/10/28</span>
+            </span>
+          </a>
+        </div>
 
-          
-          <div class="col-12 col-sm-6 col-lg-4 show-on-scroll" data-show-delay="100" data-show-duration="500" data-show-distance="20">
-            <a class="card card-blog card-vertical" href="/no-money-required/">
-              <span class="card-img">
-                <img src="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/posts/no-money-required-sm.jpg" alt="">
-              </span>
-              <span class="card-body">
-                <span class="card-title h5">爱梦想是人才们的公司，加入爱梦想不需要拿一分钱！</span>
-                <span class="card-date">2020/11/09</span>
-              </span>
-            </a>
-          </div>
+        
+        <div class="col-12 col-sm-6 col-lg-4 show-on-scroll" data-show-delay="100" data-show-duration="500" data-show-distance="20">
+          <a class="card card-blog card-vertical" href="/no-money-required/">
+            <span class="card-img">
+              <img src="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/posts/no-money-required-sm.jpg" alt="">
+            </span>
+            <span class="card-body">
+              <span class="card-title h5">爱梦想是人才们的公司，加入爱梦想不需要拿一分钱！</span>
+              <span class="card-date">2020/11/09</span>
+            </span>
+          </a>
+        </div>
 
-          
-          <div class="col-12 col-sm-6 col-lg-4 show-on-scroll" data-show-delay="100" data-show-duration="500" data-show-distance="20">
-            <a class="card card-blog card-vertical" href="/to-be-a-ywfh/">
-              <span class="card-img">
-                <img src="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/posts/to-be-a-ywfh-sm.jpg" alt="">
-              </span>
-              <span class="card-body">
-                <span class="card-title h5">透过数据展望未来，看看37200名精英将如何进入亿万富豪之列</span>
-                <span class="card-date">2020/11/24</span>
-              </span>
-            </a>
-          </div>
+        
+        <div class="col-12 col-sm-6 col-lg-4 show-on-scroll" data-show-delay="100" data-show-duration="500" data-show-distance="20">
+          <a class="card card-blog card-vertical" href="/to-be-a-ywfh/">
+            <span class="card-img">
+              <img src="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/posts/to-be-a-ywfh-sm.jpg" alt="">
+            </span>
+            <span class="card-body">
+              <span class="card-title h5">透过数据展望未来，看看37200名精英将如何进入亿万富豪之列</span>
+              <span class="card-date">2020/11/24</span>
+            </span>
+          </a>
+        </div>
 
-          
+        
 
 
       </div>
       <div class="text-center pt-60 mt-n8">
-          <a href="/blog" class="btn btn-dark btn-with-ball">阅读全部文章</a>
+        <a href="/blog" class="btn btn-dark btn-with-ball">阅读全部文章</a>
       </div>
     </div>
-
-    <div class="swiper swiper-button-style-1 mt-160 mb-60 show-on-scroll" data-swiper-slides="1" data-swiper-speed="600" data-swiper-loop="true" data-swiper-parallax="true" data-show-duration="500">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-              
-                <div class="swiper-slide overflow-hidden">
-                    <div class="card card-overlay card-blog card-image-sm card-hover-zoom text-center text-white">
-                        <div class="card-img" data-swiper-parallax-x="20%" class="swiper-image">
-                          <picture>
-                            <source media="(max-width: 827.98px)" srcset="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/forum/fforum-sm.jpg" />
-                            <img src="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/forum/fforum.jpg" />
-                          </picture>
-                            <div class="background-color" style="background-color: rgba(14, 14, 14, .4);"></div>
-                        </div>
-                        <div class="card-img-overlay">
-                            <div class="row justify-content-center align-items-center h-100">
-                                <div class="col-12 col-lg-7">
-                                  <a href="/forum/" class="text-white">
-                                    <h2 class="card-title h3-sm mb-0">
-                                      Aomoxo Global Forum 2021
-                                    </h2>
-                                    <p class="btn btn-clean mt-30">
-                                        阅读全文
-                                        <svg class="icon-arrow icon-arrow-right" width='26' height='11' viewBox='0 0 26 11' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                                            <path d='M20.5 1L25 5.5L20.5 10' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-                                            <path d='M7 5.5H25' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-                                        </svg>
-                                    </p>
-                                  </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              
-                <div class="swiper-slide overflow-hidden">
-                    <div class="card card-overlay card-blog card-image-sm card-hover-zoom text-center text-white">
-                        <div class="card-img" data-swiper-parallax-x="20%" class="swiper-image">
-                          <picture>
-                            <source media="(max-width: 827.98px)" srcset="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/letter/letter-sm.jpg" />
-                            <img src="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/letter/letter.jpg" />
-                          </picture>
-                            <div class="background-color" style="background-color: rgba(14, 14, 14, .4);"></div>
-                        </div>
-                        <div class="card-img-overlay">
-                            <div class="row justify-content-center align-items-center h-100">
-                                <div class="col-12 col-lg-7">
-                                  <a href="/letter/" class="text-white">
-                                    <h2 class="card-title h3-sm mb-0">
-                                      给野心家们的邀请函
-                                    </h2>
-                                    <p class="btn btn-clean mt-30">
-                                        阅读全文
-                                        <svg class="icon-arrow icon-arrow-right" width='26' height='11' viewBox='0 0 26 11' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                                            <path d='M20.5 1L25 5.5L20.5 10' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-                                            <path d='M7 5.5H25' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-                                        </svg>
-                                    </p>
-                                  </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              
-            </div>
-        </div>
-        <div class="swiper-button-prev white-swiper-button"><svg width='26' height='11' viewBox='0 0 26 11' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                <path d='M5.5 1L1 5.5L5.5 10' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-                <path d='M19 5.5H1' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-            </svg></div>
-        <div class="swiper-button-next white-swiper-button"><svg width='26' height='11' viewBox='0 0 26 11' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                <path d='M20.5 1L25 5.5L20.5 10' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-                <path d='M7 5.5H25' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
-            </svg></div>
-    </div>
-
     <div class="mt-130 text-center text-md-left">
       <hr class="mt-0 mb-100 pb-7">
       <div class="row gv-1 pb-7 mb-n30 align-items-center justify-content-center justify-content-md-between">
         <div class="col-md-10 col-lg-8 mr-md-auto">
           <div class="interactive-links">
-              <img class="interactive-links-image" src="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/hover-thumb.jpg" width="230" alt="">
-              <a href="/founders" class="nav-link display-4">让我们一起再为世界贡献37200名亿万富豪！</a>
+            <img class="interactive-links-image" src="https://cdn.jsdelivr.net/gh/wangfei20/wangfei20.github.io@latest/assets/images/hover-thumb.jpg" width="230" alt="">
+            <a href="/founders" class="nav-link display-4">让我们一起再为世界贡献37200名亿万富豪！</a>
           </div>
         </div>
         <div class="col-auto">
