@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.aomoxo.com/letter/</loc>
+    <loc>https://www.aomoxo.com/join/</loc>
     
     <lastmod>2021-05-30</lastmod>
     
@@ -16,16 +16,16 @@
   </url>
   
   <url>
-    <loc>https://www.aomoxo.com/letter/letter1</loc>
+    <loc>https://www.aomoxo.com/letter/</loc>
     
     <lastmod>2021-05-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.aomoxo.com/join/</loc>
+    <loc>https://www.aomoxo.com/letter/letter1</loc>
     
-    <lastmod>2021-05-28</lastmod>
+    <lastmod>2021-05-30</lastmod>
     
   </url>
   
